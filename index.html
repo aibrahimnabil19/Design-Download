@@ -4,14 +4,36 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;900&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
     <title>Your Logo</title>
+
+    <style>
+        body{
+            background: #eef6ff;
+        }
+    /* .diagonal {
+      transform: rotate(7deg);
+      transform-origin: center;
+      background: white;
+      width: 5%;
+      min-width: 30px;
+      height: 110%;
+      position: absolute;
+      left: 40%;
+      top: 0%;
+      box-shadow: 0 4px 18px rgba(15,23,42,0.05);
+      
+    } */
+        
+    </style>
 </head>
 <body>
-    <header>
-        <h3><a href="/">YOUR LOGO</a></h3>
+    <header class="flex justify-between items-center pt-3 pb-7 px-15 shadow-md bg-white">
+        <h3 class="text-2xl font-bold"><a href="/">YOUR LOGO</a></h3>
 
         <nav>
-            <ul>
+            <ul class="flex justify-between gap-4.5">
                 <li>
                     <select name="" id="journal" width="800px">
                     <option value="assets">Assets</option>
@@ -25,48 +47,61 @@
             </ul>
         </nav>
 
-        <div>
+        <div class="bg-gray-100 rounded-[20px] py-1 px-3 flex justify-between items-center gap-2">
             <img src="/images/search-interface-symbol.png" alt="" width="20px"/>
             <form action="">
-            <input type="text" placeholder="Search" width="1000px" />
+            <input class="outline-0" type="text" placeholder="Search" width="1000px" />
             </form>
         </div>
     
 
-        <div>
-            <button>Login</button>
-            <button>Sign Up</button>
+        <div class=" flex gap-4">
+            <button >Login</button>
+            <button class="text-white bg-black py-1 px-5 rounded-[20px] font-bold" >Sign Up</button>
         </div>
     </header>
 
-    <main>
-        <h1>Download design assets for free</h1>
-        <p>Your one stop platform for anything and everything design</p>
 
-        <ul>
-            <li>
-                <a href="#">Get Started</a>
-            </li>
-            <li>
-                <a href="#">Watch Video</a>
-            </li>
-        </ul>
+    <main class=" relative flex ">
+        <div class="diagonal hidden lg:block" aria-hidden="true"></div>
+        <div class="w-100 flex-col gap-6 ml-40 mt-30 space-y-8">
+            <h1 class="text-blue-950 text-5xl font-bold">Download design assets for free</h1>
+            <p>Your one stop platform for anything and everything design</p>
 
-        <div>
             <div>
-                <img src="/images/hero-blob.png" alt="">
-            <img src="images\Hero-img.png" alt="Main Image" />
+                <ul class="flex gap-6">
+                    <li>
+                        <a class="text-white bg-black py-3 px-5 rounded-[20px] font-bold" href="#">Get Started</a>
+                    </li>
+                    <li>
+                        <a class="border-2 border-gray-500 rounded-full py-3 px-5" href="#">Watch Video</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    
+        <div class="w-100 max-w-4xl mx-auto mt-5">
+            <div class="relative h-96">
+                <img class="absolute inset-x-0 top-10 mx-auto w-72 md:w-88 pointer-events-none select-none" src="/images/hero-blob.png" alt="">
+                <img class="absolute left-40 top-1/2 transform -translate-x-1/2 -translate-y-1/2 w-lg z-10" src="/images/Hero-img.png" alt="Main Image" />
             </div>
             
-            <div>
-                <h4>Seyi Ajibona</h4>
-                <p>The resources on this platform are lit</p>
+            <div class="bg-white py-3 rounded-[10px] flex justify-center items-center gap-6 -mt-4">
+                <img class="md:w-10" src="/images/male-avatar.svg" alt="">
+                <div class="">
+                    <h4 class="text-base font-bold">Seyi Ajibona</h4>
+                    <p class="text-xs">The resources on this platform are lit</p>
+                </div>
             </div>
+            
+        </div>
+        <div class="absolute right-30 top-[calc(55%+200px)]">
+            <a href="#"><img src="/images/next.png" alt=""></a>
         </div>
     </main>
 
-    <footer>
-        <a href="#"><img src="/images/next.png" alt=""></a>
-    </footer>
+    <!-- <footer>
+        
+    </footer> -->
 </body>
 </html>
