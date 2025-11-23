@@ -12,7 +12,7 @@
         body{
             background: #eef6ff;
         }
-     .diagonal {
+     /* .diagonal {
       transform: rotate(18deg);
       transform-origin: center;
       background: white;
@@ -24,21 +24,21 @@
       top: -10%;
       box-shadow: 0 4px 18px rgba(15,23,42,0.05);
       
-    } 
+    }  */
         
     </style>
 </head>
 <body>
-    <header class="relative z-10 flex justify-between items-center pt-3 pb-7 px-15 shadow-md bg-white">
+    <header class="relative z-10 hidden md:flex justify-between items-center pt-3 pb-7 px-15 shadow-md bg-white">
         <h3 class="text-2xl font-bold"><a href="index.html">YOUR LOGO</a></h3>
 
         <nav>
             <ul class="flex justify-between gap-4.5">
                 <li>
                     <select name="" id="journal" width="800px">
-                    <option value="assets">Assets</option>
-                    <option value="lorem">Lorem</option>
-                    <option value="ipsum">Ipsum</option>
+                        <option value="assets">Assets</option>
+                        <option value="lorem">Lorem</option>
+                        <option value="ipsum">Ipsum</option>
                     </select>
                 </li>
                 <li><a href="#">Creators</a></li>
@@ -62,7 +62,7 @@
     </header>
 
 
-    <main class=" relative flex ">
+    <main class=" relative md:flex overflow-hidden">
         <div class="diagonal hidden lg:block" aria-hidden="true"></div>
         <div class="w-100 flex-col gap-6 ml-40 mt-30 space-y-8">
             <h1 class="text-blue-950 text-5xl font-bold">Download design assets for free</h1>
@@ -95,13 +95,13 @@
             </div>
             
         </div>
+        
+    </main>
+
+    <footer>
         <div class="absolute right-30 top-[calc(55%+200px)]">
             <a href="#"><img src="images/next.png" alt=""></a>
         </div>
-    </main>
-
-    <!-- <footer>
-        
-    </footer> -->
+    </footer>
 </body>
 </html>
